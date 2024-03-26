@@ -108,5 +108,30 @@ cl(
   `compose2(double)(inc)(3)
 ${compose2(double)(inc)(3)}`
 );
+cl();
+
 //    b. Functions are first-class, meaning functions can be used as inputs to other functions, and functions can return functions
-//RETURN TO THIS
+cl(white, `Breaking down the composition:`);
+cl(
+  yellow,
+  `The compose2() function is actually 3 different function invocations:`
+);
+cl(yellow, `1. double is invoked and returns ITSELF:`);
+cl(cyan, `n => n * 2`);
+cl();
+cl(yellow, `2. The returned function ^ takes inc and returns a new function:`);
+cl(cyan, `(n => n * 2)(n => n + 1)`);
+cl();
+cl(
+  yellow,
+  `3. The next returned function takes "3" and EVALUATES f(g(x)), which is now double(inc(3));`
+);
+cl(cyan, `double(inc(3));`);
+cl();
+cl(yellow, `4. x evaluates to 3 and gets passed into inc():`);
+cl(cyan, `inc(3)`);
+cl();
+cl(yellow, `5. inc(3) evaluates to 4, which gets passed into double()`);
+cl(cyan, `double(4) evaluates to 8 and is returned from the function.`);
+cl(green, `double(4);`);
+cl(green, `8`);
