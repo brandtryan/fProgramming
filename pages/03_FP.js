@@ -92,8 +92,8 @@ cl();
 cl(white, `Example of how you'd use it:`);
 cl(yellow, `The two functions to be used as inputs in the composition:`);
 
-double = n => n * 2;
-inc = n => n + 1;
+double = (n = 0) => n * 2;
+inc = (n = 0) => n + 1;
 
 cl(
   cyan,
