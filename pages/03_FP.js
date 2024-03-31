@@ -18,6 +18,7 @@ const sum = (x, y) => x + y;
 cl(white, `A. In Lamda Calulus functions are always anonymous.`);
 cl(white, `In javaScript the RIGHT side of the NON-ANONYMOUS function...`);
 cl(cyan, `const sum = (x, y) => x + y;`);
+cl();
 cl(cyan, `"(x, y) => x + y"`);
 cl(white, `... is the ANONYMOUS function expression.`);
 cl();
@@ -43,12 +44,15 @@ cl(
   white,
   `B. Functions in Lambda Calculus are UNARY and only accept a SINGLE input. If you need more than one parameter, as in the N-ARY function used above:`
 );
+cl();
 cl(cyan, `(x, y) => x + y;`);
 cl(
   white,
   `...the function will take one input and return a NEW function that takes the next, and so on, and is written like so:`
 );
+cl();
 cl(cyan, `x => y => x + y;`);
+cl();
 cl(
   white,
   `...whereby the N-ARY function has been transformed to a UNARY function. Applying this transformation from a N-ARY function to a UNARY function is known as CURRYING.`
@@ -59,8 +63,10 @@ cl();
 cl(blue, `Summary:`);
 cl(white, `N-ARY Version:`);
 cl(cyan, `(x + y) => x + y;`);
+cl();
 cl(white, `UNARY (CURRIED) Version:`);
 cl(cyan, `x => y => x + y;`);
+cl();
 cl(red, "CURRYING IS NOT SUPPORTED IN VANILLA JAVASCRIPT!");
 cl();
 
@@ -81,8 +87,11 @@ cl(
 );
 compose2 = f => g => x => f(g(x));
 cl(white, `For example, the math function...`);
+cl();
 cl(magenta, `f . g`);
+cl();
 cl(white, `...can be written in javaScript as:`);
+cl();
 cl(cyan, `compose2 = f => g => x => f(g(x));`);
 cl(
   yellow,
@@ -90,6 +99,7 @@ cl(
 );
 cl();
 cl(white, `Example of how you'd use it:`);
+cl();
 cl(yellow, `The two functions to be used as inputs in the composition:`);
 
 double = (n = 0) => n * 2;
@@ -116,6 +126,7 @@ cl(
   yellow,
   `The compose2() function is actually 3 different function invocations:`
 );
+cl();
 cl(yellow, `1. double is invoked and returns ITSELF:`);
 cl(cyan, `n => n * 2`);
 cl();
@@ -135,3 +146,4 @@ cl(yellow, `5. inc(3) evaluates to 4, which gets passed into double()`);
 cl(cyan, `double(4) evaluates to 8 and is returned from the function.`);
 cl(green, `double(4);`);
 cl(green, `8`);
+cl();
